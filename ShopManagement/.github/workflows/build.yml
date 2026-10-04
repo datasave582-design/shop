@@ -8,6 +8,9 @@ on:
 jobs:
   build:
     runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: ShopManagement
 
     steps:
       - name: Checkout Code
@@ -28,4 +31,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ShopManagement-Setup
-          path: dist/*.exe
+          path: ShopManagement/dist/*.exe
